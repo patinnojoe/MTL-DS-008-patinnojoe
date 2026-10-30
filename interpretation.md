@@ -7,7 +7,10 @@ For context, _May 2023 - 3268_, _June 2023 - 3465_, _July 2023 - 3679_ , _May 20
 So for the period between May and July each previous month has an increased number of RTT than the preceeding month, this may imply a pressure point each year, although the gragh can not completely explain that.
 
 2. Figure Two - Month by Month Percentage Change of RTT
-   The Month by Month Percentage change shows a larger positive difference in September 2025 while the negative difference was observed in April 2025. the graph further shows the observed fluctuations with some months showing negative difference with preceeding months, and others showing positive changes.
+   The graph shows fluctuations, with some changes positive and some negative, however, positive changes appeared more frequent in the chart, indicating an upward trend of incomplete pathways over time.
+   From the period understudy, the year _2025_ holds both the largest and smallest percentage changes.
+   _March 2025_ recorded a percentage change of _-6%_ making it the month with the lowest change rate, as incomplete pathways fell from the Feburary 2025 _4114_ figure to _3867_ in _March 2025_ .
+   _September 2025_ holds the largest percentage difference with a _9.77_ change rate, the number of incomplete pathways increased from _4060_ the previous month to _4457_ in _September 2025_.
 
 3. Figure Three - Seasonality Trend
    the seasonality trend, is difficult to establish as we are looking at a limited data set of about 2.6 years (2024 - 2025). However some observations are that are consistent between the observed years.
