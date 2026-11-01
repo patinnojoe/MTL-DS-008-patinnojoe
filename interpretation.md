@@ -7,12 +7,28 @@
    So for the period between May and July each previous month has an increased number of RTT than the preceeding month, this may imply a pressure point each year, although the gragh can not completely explain that.
 
 2. Figure Two - Month by Month Percentage Change of RTT
+
    The graph shows fluctuations, with some changes positive and some negative, however, positive changes appeared more frequent in the chart, indicating an upward trend of incomplete pathways over time.
    From the period understudy, the year _2025_ holds both the largest and smallest percentage changes.
    _March 2025_ recorded a percentage change of _-6%_ making it the month with the lowest change rate, as incomplete pathways fell from the Feburary 2025 _4114_ figure to _3867_ in _March 2025_ .
    _September 2025_ holds the largest percentage difference with a _9.77_ change rate, the number of incomplete pathways increased from _4060_ the previous month to _4457_ in _September 2025_.
 
 3. Figure Three - Seasonality Trend
+
    The trend shows generally that incomplete pathways are increasing. 2023, which is the begining year under review has the lowest overall total number of inconplete pathways, 2024 has a general higher total number of incomplete pathway than 2023, same overall increase is observed as 2026 has higher overal total number of incomplete pathways than 2025.
-4. Figure Four and Five - Average (Median) Waiting time and 92nd Percentile Wait time
+
+4. Figure Four - Average (Median) Waiting time
+
    The observation from the Average median waiting time indicates an overall increase in the average waiting time year on yearhowever, each year, the direction of the average waiting time median is declining. the highest recorded decline is in 2025, where the average median collasped from a value of 15.9 weeks in sepetember of 2025 to 10.7 weeks in November.A worthy observation is that, the average median time generally declines from march to June, from 2023-2025, however, 2026 average waiting time within this period goes the opposite direction another important observation is that the average waiting time generally picks up in November of every year, as the year 2023-2025 shows that at this time patients would most likely wait the longest.
+
+5. Figure Six – Long-Waiting RTT Pathways (52+, 65+ and 78+ Weeks)
+
+   The bar chart compares the average monthly number of incomplete RTT pathways waiting 52 weeks or longer, 65 weeks or longer, and 78 weeks or longer between 2023 and 2026.
+
+   Interestingly, the results show a general decline in long-waiting pathways after 2023, despite the overall incomplete waiting list increasing during the same period.
+
+   In 2023, the hospital recorded an average of 156.25 pathways waiting 52 weeks or longer, compared with 52.58 in 2024, 36.25 in 2025 and 24.14 in 2026. A similar decline is observed among patients waiting 65 weeks or longer, which fell from an average of 46.50 in 2023 to zero in 2026. The number of pathways waiting 78 weeks or longer also declined from 8.58 in 2023 to zero from 2025 onwards.
+
+   This suggests that although the overall waiting list continued to grow, the number of patients experiencing very long waits reduced substantially after 2023. One possible explanation is that the hospital may have improved its handling of long-waiting cases, while the continued increase in incomplete pathways may indicate growing pressure on its overall waiting-list capacity.
+
+   However, the available data cannot establish the reasons behind these changes. Further investigation into referral rates and treatment completion would be necessary to understand whether improvements in handling long-waiting cases occurred alongside increasing demand.
