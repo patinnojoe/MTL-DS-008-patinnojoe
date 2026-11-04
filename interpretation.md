@@ -32,3 +32,12 @@
    This suggests that although the overall waiting list continued to grow, the number of patients experiencing very long waits reduced substantially after 2023. One possible explanation is that the hospital may have improved its handling of long-waiting cases, while the continued increase in incomplete pathways may indicate growing pressure on its overall waiting-list capacity.
 
    However, the available data cannot establish the reasons behind these changes. Further investigation into referral rates and treatment completion would be necessary to understand whether improvements in handling long-waiting cases occurred alongside increasing demand.
+
+6. model selection and evaluation
+
+   Model selection and evaluation
+   The baseline models were developed and evaluated using Mean Absolute Error (MAE). Among the baseline forecasting strategies, the Naive model achieved the lowest MAE, indicating that it produced the most accurate forecasts among the baseline models tested.
+
+   To investigate whether more advanced time-series models could improve forecasting accuracy, ARIMA and SARIMA models were subsequently evaluated. The ARIMA model achieved an identical MAE to the Naive model, suggesting that it did not provide a measurable improvement over the baseline approach. The SARIMA model performed worse on the test dataset.
+
+   These results suggest that the additional complexity of the ARIMA and SARIMA models did not translate into improved forecasting accuracy for the observation period considered. Therefore, the Naive model remains a strong candidate for the final forecasting model, subject to further validation using rolling-origin cross-validation.
