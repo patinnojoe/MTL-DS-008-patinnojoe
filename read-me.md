@@ -115,6 +115,7 @@ What volume is expected over the next 3–6 months?
 How uncertain is that forecast?
 Under what forecast conditions would planning teams need additional capacity?
 Which assumptions or data limitations could materially affect the forecast?
+
 Important modelling rule
 This is not a competition to use the most complex algorithm.
 

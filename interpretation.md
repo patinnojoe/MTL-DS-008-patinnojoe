@@ -33,11 +33,30 @@
 
    However, the available data cannot establish the reasons behind these changes. Further investigation into referral rates and treatment completion would be necessary to understand whether improvements in handling long-waiting cases occurred alongside increasing demand.
 
-6. model selection and evaluation
+### 6. Model Selection and Evaluation
 
-   Model selection and evaluation
-   The baseline models were developed and evaluated using Mean Absolute Error (MAE). Among the baseline forecasting strategies, the Naive model achieved the lowest MAE, indicating that it produced the most accurate forecasts among the baseline models tested.
+The dataset was divided chronologically into training and test sets. The training set contains monthly observations from January 2023 to December 2025, while the test set covers January to July 2026. This approach ensures that the models are trained on historical observations and evaluated against later, previously unseen data. The objective was to assess how accurately each model could forecast the backlog over the seven-month test period.
 
-   To investigate whether more advanced time-series models could improve forecasting accuracy, ARIMA and SARIMA models were subsequently evaluated. The ARIMA model achieved an identical MAE to the Naive model, suggesting that it did not provide a measurable improvement over the baseline approach. The SARIMA model performed worse on the test dataset.
+The baseline models were developed and evaluated using Mean Absolute Error (MAE) and time-series cross-validation (CV). Among the baseline forecasting strategies, the Naive model achieved the lowest test MAE and average CV error, indicating that it performed best among the baseline models tested.
 
-   These results suggest that the additional complexity of the ARIMA and SARIMA models did not translate into improved forecasting accuracy for the observation period considered. Therefore, the Naive model remains a strong candidate for the final forecasting model, subject to further validation using rolling-origin cross-validation.
+The Naive model recorded a test MAE of **105.7**, compared with **679.4** for HistoricAverage, **532.0** for SeasonalNaive, and **126.0** for WindowAverage.
+
+To investigate whether more advanced time-series models could improve forecasting accuracy, ARIMA and SARIMA models were subsequently evaluated. The standard ARIMA model achieved an identical MAE of **105.7** to the Naive model, indicating no measurable improvement over the baseline. ARIMA with Drift performed slightly worse, with an MAE of **109.4**. The SARIMA model also performed worse on the test dataset, recording an MAE of approximately **283.3**.
+
+However, cross-validation produced a different result. SARIMA achieved the lowest average CV MAE of **150.1**, outperforming Naive (**205.7**), WindowAverage (**226.7**) and ARIMA with Drift (**232.1**).
+
+These results indicate that SARIMA performed better across the historical cross-validation windows but did not generalise as well to the January–July 2026 test period. The difference in performance suggests that the choice of forecasting model may be sensitive to the evaluation period.
+
+Considering its lower test MAE, simplicity and interpretability, the Naive model is retained as the final forecasting model. It uses the most recent observed backlog value as the forecast for each future month. However, SARIMA's better cross-validation performance is acknowledged as a limitation in making a definitive model-selection decision.
+
+### Final Forecast and Prediction Intervals
+
+The Naive model was fitted using the complete historical dataset, covering January 2023 to July 2026, to generate a six-month forecast from August 2026 to January 2027.
+
+The model forecasts **4,771 incomplete RTT pathways for each of the six forecast months**. This is because the Naive forecasting approach uses the most recently observed value as the prediction for all future periods. Consequently, the forecast assumes that the July 2026 backlog level will persist throughout the forecast horizon.
+
+To communicate forecast uncertainty, 80% and 95% prediction intervals were generated. For August 2026, the 80% interval ranges from approximately 4,593 to 4,949 pathways, while the 95% interval ranges from approximately 4,499 to 5,043 pathways. By January 2027, these ranges widen to approximately 4,335–5,207 and 4,105–5,437 pathways, respectively.
+
+The widening intervals indicate increasing uncertainty as the forecast horizon extends. Although the point forecast remains unchanged, the actual waiting-list backlog could be higher or lower than the predicted value.
+
+These forecasts should be interpreted as baseline planning estimates rather than definitive predictions of future waiting-list volumes. The model does not account for changes in patient referrals, treatment activity, staffing or available clinical capacity. Such factors could materially influence the actual backlog.
