@@ -4,10 +4,6 @@
 
 ## 1. Executive Summary
 
-## 1. Executive Summary
-
-# Executive Summary
-
 This project applies time-series forecasting to examine waiting-list pressure in the NHS, focusing on incomplete Referral to Treatment (RTT) pathways in the Trauma and Orthopaedics specialty at Lancashire Teaching Hospitals NHS Foundation Trust. Using 43 monthly observations from NHS England, covering January 2023 to July 2026, the project investigates how the backlog has evolved and estimates its potential trajectory over the following six months. The first 36 observations were used for model training, while January to July 2026 formed the holdout test period.
 
 The analysis found that incomplete pathways increased from 3,301 in January 2023 to 4,771 in July 2026, representing a 44.5% increase. The backlog also increased between May and July in each of the four observed years, suggesting a possible recurring pattern of pressure during these months, although the limited historical period and underlying upward trend make it difficult to establish seasonality conclusively. Meanwhile, the average monthly number of pathways waiting 52 weeks or longer declined from approximately 156 in 2023 to 24 during January–July 2026. No pathways waiting 78 weeks or longer were recorded from 2025 onwards. This indicates that growth in the overall waiting list has not been accompanied by a similar increase in the longest-waiting categories.
@@ -21,8 +17,6 @@ From a service-planning perspective, the findings highlight the importance of mo
 A key limitation is that the analysis forecasts incomplete pathways only. It does not model incoming referrals, admitted and non-admitted treatment activity, staffing levels or available clinical capacity. Consequently, it cannot independently determine how many additional treatments, clinical sessions or staff would be required to reduce the backlog. The forecast should be updated as new monthly data becomes available, with actual outcomes compared against predictions and model performance reassessed.
 
 ## 2. Problem Statement and Objectives
-
-## 2. Problem Statement
 
 Waiting times for elective healthcare remain an important operational challenge for the NHS. NHS England publishes monthly Referral to Treatment (RTT) statistics, providing information on patients waiting for treatment across healthcare providers and clinical specialties. However, historical reporting describes how waiting lists have changed; it does not, by itself, provide an estimate of how waiting-list backlogs might develop in the future.
 
@@ -45,8 +39,6 @@ The project addresses the following research and analytical questions:
 **Scope:** The analysis focuses on one NHS provider and one treatment function: Lancashire Teaching Hospitals NHS Foundation Trust (RXN), Trauma and Orthopaedics (C_110). The target variable is the monthly number of incomplete RTT pathways, representing the active waiting-list backlog rather than new referrals or total patient demand. Forecasting models are evaluated using time-based holdout testing and cross-validation. The modelling does not incorporate new referrals, completed treatment activity, staffing or available clinical capacity. Therefore, it provides a baseline projection of backlog volumes rather than a direct estimate of future treatment demand or the additional resources required to reduce waiting times.
 
 ## 3. Data Sources and Preparation
-
-### 3.1 Data Source
 
 The data used in this project was obtained from NHS England's [Referral to Treatment (RTT) waiting-times statistics](https://www.england.nhs.uk/statistics/statistical-work-areas/rtt-waiting-times/).
 
