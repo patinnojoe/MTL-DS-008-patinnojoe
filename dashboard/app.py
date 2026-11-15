@@ -1,18 +1,34 @@
 import streamlit as st
+from pathlib import Path
+from components.navigation import render_navigation
 
-st.title("User Registration Form")
+# Resolve the project root directory
+BASE_DIR = Path(__file__).resolve().parent.parent
 
-name = st.text_input(label="Full name", placeholder="Enter name, e.g John Doe")
-age = st.slider(label='Age', value=18, min_value=18, max_value=70)
-button = st.button('Submit')
-if button:
-    st.write(f"""
-    
-   User Details Submitted!
-   
-   Name: {name} 
-   
-   Age: {age}
-    """
-    
+# Locate the NHS logo
+logo_path = BASE_DIR / "assets" / "nhs-logo.webp"
+
+
+
+
+st.set_page_config(
+    page_title="Lancashire NHS RTT Waiting List Dashboard",
+    layout="wide",
+    page_icon=str(logo_path),
 )
+
+
+# Initialise navigation
+pages = render_navigation()
+
+# Display selected page
+pages.run()
+
+import pandas as pd
+
+df = pd.read_csv("data/analytical/combined.csv")
+
+print(df.head())
+print(df.columns.tolist())
+print(df.dtypes)
+print(df.shape)
