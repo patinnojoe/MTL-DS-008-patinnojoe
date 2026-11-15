@@ -25,23 +25,19 @@ long_waits = latest["Total 52 plus weeks"]
 
 performance_18_weeks = latest["% within 18 weeks"]
 
-col1, col2, col3, col4 = st.columns(4)
 
 
 
 #---------------
-
 st.markdown(
     """
     <style>
-        .stMainBlockContainer > div[data-testid="stVerticalBlock"] {
-            min-height: calc(100vh - 4rem);
-            display: flex;
-            flex-direction: column;
+        .stMainBlockContainer {
+            min-height: 100vh;
         }
 
-        .st-key-page_content {
-            flex: 1;
+        html, body {
+            overflow-y: auto;
         }
     </style>
     """,
@@ -50,8 +46,11 @@ st.markdown(
 
 
 
+
+
 render_header("Project Overview")
 
+col1, col2, col3, col4 = st.columns(4)
 
 with col1:
     st.metric(
@@ -77,7 +76,8 @@ with col3:
 with col4:
     st.metric(
         label="Within 18 Weeks",
-        value=f"{performance_18_weeks:.1f}%"
+        value=f"{performance_18_weeks * 100:.1f}%"
+       
     )
 
   
