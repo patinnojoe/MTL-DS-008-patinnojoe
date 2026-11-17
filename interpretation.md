@@ -19,21 +19,9 @@
 
 4. Figure Four - Average (Median) Waiting time
 
-   The observation from the Average median waiting time indicates an overall increase in the average waiting time year on yearhowever, each year, the direction of the average waiting time median is declining. the highest recorded decline is in 2025, where the average median collasped from a value of 15.9 weeks in sepetember of 2025 to 10.7 weeks in November.A worthy observation is that, the average median time generally declines from march to June, from 2023-2025, however, 2026 average waiting time within this period goes the opposite direction another important observation is that the average waiting time generally picks up in November of every year, as the year 2023-2025 shows that at this time patients would most likely wait the longest.
+   The observation from the Average median waiting time indicates an overall increase in the average waiting time year on year however, each year, the direction of the average waiting time median is declining. the highest recorded decline is in 2025, where the average median collasped from a value of 15.9 weeks in sepetember of 2025 to 10.7 weeks in November.A worthy observation is that, the average median time generally declines from march to June, from 2023-2025, however, 2026 average waiting time within this period goes the opposite direction another important observation is that the average waiting time generally picks up in November of every year, as the year 2023-2025 shows that at this time patients would most likely wait the longest.
 
-5. Figure Six – Long-Waiting RTT Pathways (52+, 65+ and 78+ Weeks)
-
-   The bar chart compares the average monthly number of incomplete RTT pathways waiting 52 weeks or longer, 65 weeks or longer, and 78 weeks or longer between 2023 and 2026.
-
-   Interestingly, the results show a general decline in long-waiting pathways after 2023, despite the overall incomplete waiting list increasing during the same period.
-
-   In 2023, the hospital recorded an average of 156.25 pathways waiting 52 weeks or longer, compared with 52.58 in 2024, 36.25 in 2025 and 24.14 in 2026. A similar decline is observed among patients waiting 65 weeks or longer, which fell from an average of 46.50 in 2023 to zero in 2026. The number of pathways waiting 78 weeks or longer also declined from 8.58 in 2023 to zero from 2025 onwards.
-
-   This suggests that although the overall waiting list continued to grow, the number of patients experiencing very long waits reduced substantially after 2023. One possible explanation is that the hospital may have improved its handling of long-waiting cases, while the continued increase in incomplete pathways may indicate growing pressure on its overall waiting-list capacity.
-
-   However, the available data cannot establish the reasons behind these changes. Further investigation into referral rates and treatment completion would be necessary to understand whether improvements in handling long-waiting cases occurred alongside increasing demand.
-
-### 6. Model Selection and Evaluation
+### 5. Model Selection and Evaluation
 
 The dataset was divided chronologically into training and test sets. The training set contains monthly observations from January 2023 to December 2025, while the test set covers January to July 2026. This approach ensures that the models are trained on historical observations and evaluated against later, previously unseen data. The objective was to assess how accurately each model could forecast the backlog over the seven-month test period.
 

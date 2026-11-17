@@ -2,18 +2,23 @@ import streamlit as st
 from components.header import render_header
 from components.footer import render_footer
 from utils.data_loader import load_data
+import pandas as pd
 
 
 
 #---------------
+# load data
 df = load_data()
+# monthly change
 df['monthly_change'] = df['Total number of incomplete pathways'].diff()
 
+# largest monthly change
 largest_monthly_changes = (
     df.nlargest(5, "monthly_change")
     [["month_label", "monthly_change"]]
     .reset_index(drop=True)
 )
+# summary statistics
 backlog_column = "Total number of incomplete pathways"
 
 starting_backlog = df.iloc[0][backlog_column]
@@ -25,6 +30,7 @@ percentage_change = (net_change / starting_backlog) * 100
 
 largest_increase = df.loc[df["monthly_change"].idxmax()]
 
+# average RTT by year
 average_incomplete_RTT_by_year = (
     df.groupby("year")["Total number of incomplete pathways"]
     .mean()
@@ -36,6 +42,10 @@ average_incomplete_RTT_by_year = (
 )
 
 
+
+
+
+# 
 st.markdown(
     """
     <style>
@@ -112,28 +122,14 @@ st.bar_chart(
 st.write(" ")
 st.write(" ")
 
-# display the largest month changes
-st.subheader("Months with the Largest Backlog Increases")
-st.dataframe(
-    largest_monthly_changes.style.format({
-        "monthly_change": "{:+,.0f}"
-    }),
-    hide_index=True,
-    use_container_width=True
-)
 
-st.write(" ")
-st.write(" ")
 
 # plot year on year average for Incomplete RTT
 st.subheader("Yearly Average of Incomplete pathways")
-st.dataframe(
-    average_incomplete_RTT_by_year.style.format({
-        "Average Incomplete Pathways": "{:,.2f}"
-    }),
-    hide_index=True,
-    use_container_width=True
-)
+st.caption("2026 figures cover January–July only.")
+st.bar_chart(y='Average Incomplete Pathways', x='Year', data=average_incomplete_RTT_by_year)
+
+
 
 
 

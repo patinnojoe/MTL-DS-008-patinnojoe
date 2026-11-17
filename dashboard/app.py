@@ -23,12 +23,3 @@ pages = render_navigation()
 
 # Display selected page
 pages.run()
-
-import pandas as pd
-
-df = pd.read_csv("data/analytical/combined.csv")
-
-print(df.head())
-print(df.columns.tolist())
-print(df.dtypes)
-print(df.shape)
