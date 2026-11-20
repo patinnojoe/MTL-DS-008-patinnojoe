@@ -10,6 +10,24 @@ from utils.data_loader import load_data
 df = load_data()
 
 
+#---------------
+st.markdown(
+    """
+    <style>
+        .stMainBlockContainer {
+            min-height: 100vh;
+        }
+
+        html, body {
+            overflow-y: auto;
+        }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+
+
 # --------------------------------
 # Waiting-time categories
 # --------------------------------
@@ -36,7 +54,7 @@ df["Long Waits"] = df[long_wait_columns].sum(axis=1)
 # --------------------------------
 
 waiting_time_profile = df[
-    ["month_label", "Short Waits", "Standard Waits", "Long Waits"]
+    ["period", "Short Waits", "Standard Waits", "Long Waits"]
 ]
 
 
@@ -179,7 +197,7 @@ st.subheader("Waiting-Time Statistics")
 
 st.line_chart(
     data=waiting_time_profile,
-    x="month_label",
+    x="period",
     y=["Short Waits", "Standard Waits", "Long Waits"],
     x_label="Reporting Month",
     y_label="Incomplete Pathways"
