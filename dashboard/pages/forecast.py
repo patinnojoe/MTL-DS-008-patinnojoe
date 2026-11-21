@@ -224,67 +224,38 @@ st.dataframe(forecast_df)
 
 # forecast interpretation
 st.subheader("Forecast Interpretation")
-
 st.markdown(
     """
-    <div>
-        <h6>Projected Waiting-List Backlog</h6>
-        <p>
-            The Naive forecasting model projects
-            <strong>4,771 incomplete RTT pathways per month</strong>
-            from August 2026 to January 2027, based on the
-            last observed backlog in July 2026.
-        </p>
-        <p>
-            The constant forecast reflects the model's use
-            of the most recent observation as the prediction
-            for subsequent months. It does not imply that
-            actual waiting-list levels will remain unchanged.
-        </p>
-    </div>
+    #### Projected Waiting-List Backlog
 
-    <div>
-        <h6>Forecast Uncertainty</h6>
-        <p>
-            Although the point forecast remains constant at
-            <strong>4,771 pathways</strong>, actual future
-            backlog levels may differ from this estimate.
-            To quantify this uncertainty, the model produces
-            <strong>80% and 95% prediction intervals</strong>.
-        </p>
-        <p>
-            These intervals provide ranges intended to contain
-            future observations at their respective coverage
-            levels, assuming the model's uncertainty estimates
-            are appropriately calibrated.
-        </p>
-        <p>
-            Prediction intervals widen as the forecast horizon
-            increases, reflecting greater uncertainty about
-            backlog levels further into the future.
-        </p>
+    The Naive forecasting model projects **4,771 incomplete RTT pathways per month**
+    from August 2026 to January 2027, based on the last observed backlog in July 2026.
 
-        <p><strong>For example, the 95% prediction intervals are:</strong></p>
+    The constant forecast reflects the model's use of the most recent observation
+    as the prediction for subsequent months. However, this does not imply that
+    actual waiting-list levels will remain unchanged.
 
-        <ul>
-            <li>
-                <strong>August 2026:</strong>
-                4,499–5,043 pathways.
-            </li>
-            <li>
-                <strong>January 2027:</strong>
-                4,105–5,437 pathways.
-            </li>
-        </ul>
+    #### Forecast Uncertainty
 
-        <p>
-            This widening range indicates that the model is
-            less certain about the backlog six months ahead
-            than one month ahead.
-        </p>
-    </div>
-    """,
-    unsafe_allow_html=True
+    Although the point forecast remains constant at **4,771 pathways**, actual
+    future backlog levels may differ from this estimate. To quantify this
+    uncertainty, the model produces **80% and 95% prediction intervals**.
+
+    These intervals provide ranges intended to contain future observations at
+    their respective coverage levels, assuming the model's uncertainty estimates
+    are appropriately calibrated.
+
+    Prediction intervals widen as the forecast horizon increases, reflecting
+    greater uncertainty about backlog levels further into the future.
+
+    **For example, the 95% prediction intervals are:**
+
+    - **August 2026:** 4,499–5,043 incomplete pathways.
+    - **January 2027:** 4,105–5,437 incomplete pathways.
+
+    The widening range indicates that the model is less certain about the
+    backlog six months ahead than one month ahead.
+    """
 )
 
 
